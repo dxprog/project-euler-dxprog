@@ -9,9 +9,9 @@ while (true) {
 	$max++;
 	$triangle += $max;
 	$divisors = 0;
-	$start = 1;
+	$inc = $triangle % 2 == 0 ? 1 : 2;
 	
-	for ($i = $start, $count = round(sqrt($triangle)); $i <= $count; $i++) {
+	for ($i = 1, $count = round(sqrt($triangle)); $i <= $count; $i += $inc) {
 		if ($triangle % $i == 0) {
 			$divisors += 2;
 		}
